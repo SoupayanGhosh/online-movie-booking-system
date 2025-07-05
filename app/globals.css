@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 160 100% 50%;
+    --primary-foreground: 240 5% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.neon-green-glow {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.7), 0 0 20px rgba(57, 255, 20, 0.5), 0 0 30px rgba(57, 255, 20, 0.3);
+}
+
+.neon-blue-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.button-neon-green {
+  @apply bg-transparent text-neon-green border border-neon-green hover:bg-neon-green/10 transition-all duration-300;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.button-neon-green:hover {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.8);
+}
+
+.button-neon-blue {
+  @apply bg-transparent text-neon-blue border border-neon-blue hover:bg-neon-blue/10 transition-all duration-300;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.button-neon-blue:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+.cinema-screen {
+  background: linear-gradient(to bottom, rgba(57, 255, 20, 0.2), transparent);
+  border-top: 2px solid #39ff14;
+}
+
+.movie-card-hover {
+  transition: all 0.3s ease;
+}
+
+.movie-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(57, 255, 20, 0.3), 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.seat-available {
+  @apply border border-gray-600 hover:border-neon-green transition-colors;
+}
+
+.seat-selected {
+  @apply bg-neon-green text-black animate-pulse-neon;
+}
+
+.seat-taken {
+  @apply bg-gray-700;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, rgba(57, 255, 20, 0.05) 0%, rgba(0, 255, 255, 0.05) 100%);
+}
+
